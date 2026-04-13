@@ -12,3 +12,17 @@ https://github.com/dReposU/ML/blob/main/Sem_1/Ejercicio-Preprocesamiento/01_ML_P
 ->
 https://colab.research.google.com/github/dReposU/ML/blob/main/Sem_1/Ejercicio-Preprocesamiento/01_ML_Preprocesamiento_CriptoMonedas_mod.ipynb
 ```
+
+# Convenciones de nombre
+
+Si al final del nombre del `.ipynb` está escrito `clase` u `original`, se suele referir a que el archivo sigue estrictamente el código y resultados del profesor. Con el único cambio el código de carga de datos para que sea compatible en VSC y Google Colab:
+
+```python
+import sys
+
+if 'google.colab' in sys.modules:
+    data = pd.read_csv(f'https://raw.githubusercontent.com/dReposU/ML/main/.../foo.csv')
+else:
+    data = pd.read_csv(".../foo.csv")
+data.head()
+```
